@@ -1,11 +1,6 @@
 function question(question, opt1, opt2, opt3, opt4, rightAnswer){
     this.question = question;
-    this.options = {
-        opt1: opt1,
-        opt2: opt2,
-        opt3: opt3,
-        opt4: opt4
-    };
+    this.options = [opt1, opt2, opt3, opt4];
     this.rightAnswer = rightAnswer;
 }
 
@@ -29,16 +24,17 @@ function showQuestion(id){
   const questSection = document.querySelector("#questions");
   if(id < 8){
     console.log(`Questão ${id+1}\n`);
+    let options = perguntas[id].options.sort(randOrd);
     questSection.innerHTML =  `
     <h2>${id+1}/${perguntas.length}- ${perguntas[id].question}?</h2>
-    <input id="opt1" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${perguntas[id].options.opt1}')">
-    <label for="opt1">${perguntas[id].options.opt1}</label>
-    <input id="opt2" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${perguntas[id].options.opt2}')">
-    <label for="opt2">${perguntas[id].options.opt2}</label>
-    <input id="opt3" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${perguntas[id].options.opt3}')">
-    <label for="opt3">${perguntas[id].options.opt3}</label>
-    <input id="opt4" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${perguntas[id].options.opt4}')">
-    <label for="opt4">${perguntas[id].options.opt4}</label>
+    <input id="opt1" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[0]}')">
+    <label for="opt1">${options[0]}</label>
+    <input id="opt2" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[1]}')">
+    <label for="opt2">${options[1]}</label>
+    <input id="opt3" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[2]}')">
+    <label for="opt3">${options[2]}</label>
+    <input id="opt4" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[3]}')">
+    <label for="opt4">${options[3]}</label>
     <div class="tempo"></div>`;
     setTimeout(`showQuestion(${id+1})`, 10000);
   }
