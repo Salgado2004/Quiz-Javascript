@@ -25,6 +25,7 @@ function showQuestion(id){
   if(id < 8){
     console.log(`Questão ${id+1}\n`);
     let options = perguntas[id].options.sort(randOrd);
+    options = options.sort(randOrd);
     questSection.innerHTML =  `
     <h2>${id+1}/${perguntas.length}- ${perguntas[id].question}?</h2>
     <input id="opt1" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[0]}')">
