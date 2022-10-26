@@ -9,21 +9,8 @@ function question(question, opt1, opt2, opt3, opt4, rightAnswer){
     this.rightAnswer = rightAnswer;
 }
 
-function getRandom(){
-    let order = [];
-    let min = Math.ceil(0);
-    let max = Math.floor(8);
-    for (i = 0; i < 8; i++){
-      let value =  Math.floor(Math.random() * (max - min) + min);
-      if (order.includes(value)){
-        i--;
-        continue;
-      } else{
-        order.push(value);
-      }
-    }
-    console.log(order)
-    return order;
+  function randOrd() {
+    return (Math.round(Math.random())-0.5);
   }
 
 const pergunta1 = new question('O lema "A inteligência além da medida é o maior tesouro do homem" pertence a qual casa', "Grifinória", "Sonserina", "Lufa-lufa", "Corvinal", "Corvinal");
@@ -34,7 +21,7 @@ const pergunta5 = new question("Em qual animal Rita Skeeter se transforma para p
 const pergunta6 = new question("Em que ano o primeiro filme foi lançado", "2001", "1999", "2004", "2002", "2001");
 const pergunta7 = new question("A que personagem pertence essa voz", "Remus Lupin", "Gilderoy Lockhart", "Olho-Tonto Moody", "Cornelius Fudge", "Remus Lupin");
 const pergunta8 = new question("Que lugar é esse cenário", "Salão Comunal", "Sala do Dumbledore", "Hogsmeade", "Dedos de mel", "Dedos de mel");
-const perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8];
+let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8];
 let pontos = 0;
 let acertos = 0;
 
@@ -84,7 +71,8 @@ function saveAnswer(quest, value){
 
 function startQuiz(){
     console.log("O Quiz começou\n");
-    let order = getRandom();
+    perguntas = perguntas.sort(randOrd)
+    console.log(perguntas)
     //const perguntas = [];
     //for(i of order){
      //   perguntas.push[lista[i]];
@@ -100,3 +88,4 @@ function endQuiz(){
     <h2>Sua pontuação final é ${pontos} pts</h2>
     `;
 }
+
