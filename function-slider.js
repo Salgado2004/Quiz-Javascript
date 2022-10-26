@@ -69,11 +69,6 @@ function saveAnswer(quest, value){
 function startQuiz(){
     console.log("O Quiz começou\n");
     perguntas = perguntas.sort(randOrd)
-    console.log(perguntas)
-    //const perguntas = [];
-    //for(i of order){
-     //   perguntas.push[lista[i]];
-    //}
     showQuestion(0);
 }
 
