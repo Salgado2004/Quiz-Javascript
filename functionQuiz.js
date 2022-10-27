@@ -18,9 +18,12 @@ const pergunta5 = new question("Em qual animal Rita Skeeter se transforma para p
 const pergunta6 = new question("Em que ano o primeiro filme foi lançado", "2001", "1999", "2004", "2002", "2001", "", "img/primeiroFilme.jpg");
 const pergunta7 = new question("De que personagem é essa voz", "Remus Lupin", "Sirius Black", "Olho-Tonto Moody", "Cornelius Fudge", "Sirius Black", "<audio controls autoplay><source src='audio/sirius.mp3' type='audio/mpeg'></audio>", "img/voz.png");
 const pergunta8 = new question("Que lugar é esse cenário", "Salão Comunal", "Salão Principal", "Sala de aula", "Gringotts", "Salão Principal", "", "img/grandeSalao.jpg");
-let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8];
+const pergunta9 = new question("Em que ano Voldemort tentou matar o Harry bebê", "1997", "1981", "1998", "1995", "1998", "", "img/bebeHarry.jpg");
+const pergunta10 = new question("Em qual filme/livro o Voldemort retornou", "primeiro", "Quarto", "Segundo", "Sétimo", "Quarto", "", "img/voldemort.jpg");
+let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10];
 let pontos = 0;
 let acertos = 0;
+let timer = 0;
 
 function showQuestion(id){
   const questSection = document.querySelector("#questions");
@@ -30,7 +33,7 @@ function showQuestion(id){
     let options = perguntas[id].options.sort(randOrd);
     options = options.sort(randOrd);
     questSection.innerHTML =  `
-    <h2 id="questTitle">${id+1}/${perguntas.length}- ${perguntas[id].question}?</h2>
+    <h2 id="questTitle">${id+1}/8- ${perguntas[id].question}?</h2>
     ${perguntas[id].bonus}
     <img src="${perguntas[id].img}" alt='${perguntas[id].img}'>
     <div><input id="opt1" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[0]}')">
@@ -42,7 +45,7 @@ function showQuestion(id){
     <input id="opt4" type="radio" name="quest" onclick="saveAnswer(${id+1}, '${options[3]}')">
     <label for="opt4">${options[3]}</label></div>
     <div class="tempo"></div>`;
-    setTimeout(`showQuestion(${id+1})`, 15000);
+    timer = setTimeout(`showQuestion(${id+1})`, 15000);
   }
   else{
     endQuiz();
@@ -72,7 +75,7 @@ function saveAnswer(quest, value){
     } else{
         console.log(`Questão ${quest}: ${value} - Errou!`);
     }
-    setTimeout(clearTimeout(timer), 500);
+    setTimeout(`nextQuest(${quest})`, 1000);
 }
 
 function startQuiz(){
@@ -85,8 +88,13 @@ function endQuiz(){
     console.log("Acabou");
     const questSection = document.querySelector("#questions");
     questSection.innerHTML = `
-    <div id="FinalPoints"><h2>Você acertou ${acertos} de ${perguntas.length} perguntas</h2>
+    <div id="FinalPoints"><h2>Você acertou ${acertos} de 8 perguntas</h2>
     <h2>Sua pontuação final é ${pontos} pts</h2></div>
     `;
+}
+
+function nextQuest(quest){
+  clearTimeout(timer);
+  showQuestion(quest);
 }
 
