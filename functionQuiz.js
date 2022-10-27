@@ -16,7 +16,7 @@ const pergunta3 = new question("Qual Horcrux foi a segunda a ser destruída", "O
 const pergunta4 = new question("Com quem Harry foi ao Baile de Inverno", "Parvati Patil", "Padma Patil", "Cho Chang", "Gina Weasley", "Parvati Patil", "", "img/baile.jpg");
 const pergunta5 = new question("Em qual animal Rita Skeeter se transforma para poder espionar as pessoas", "Um besouro", "Uma formiga", "Uma barata", "Uma aranha", "Um besouro", "", "img/ritaSkeeter.jpg");
 const pergunta6 = new question("Em que ano o primeiro filme foi lançado", "2001", "1999", "2004", "2002", "2001", "", "img/primeiroFilme.jpg");
-const pergunta7 = new question("De que personagem é essa voz", "Remus Lupin", "Sirius Black", "Olho-Tonto Moody", "Cornelius Fudge", "Sirius Black", "<audio controls autoplay><source src='sirius.mp3' type='audio/mpeg'></audio>", "img/voz.png");
+const pergunta7 = new question("De que personagem é essa voz", "Remus Lupin", "Sirius Black", "Olho-Tonto Moody", "Cornelius Fudge", "Sirius Black", "<audio controls autoplay><source src='audio/sirius.mp3' type='audio/mpeg'></audio>", "img/voz.png");
 const pergunta8 = new question("Que lugar é esse cenário", "Salão Comunal", "Salão Principal", "Sala de aula", "Gringotts", "Salão Principal", "", "img/grandeSalao.jpg");
 let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8];
 let pontos = 0;
