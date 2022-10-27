@@ -75,6 +75,11 @@ label:hover{
   animation: timer 15s linear;
 }
 
+#FinalPoints{
+  font-size: 32px;
+  color: #D9C58B;
+}
+
 @keyframes timer {
   0%{
     width: 100%;
