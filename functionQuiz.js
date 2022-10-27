@@ -82,8 +82,8 @@ function endQuiz(){
     console.log("Acabou");
     const questSection = document.querySelector("#questions");
     questSection.innerHTML = `
-    <h2>Você acertou ${acertos} de ${perguntas.length} perguntas</h2>
-    <h2>Sua pontuação final é ${pontos} pts</h2>
+    <div id="FinalPoints"><h2>Você acertou ${acertos} de ${perguntas.length} perguntas</h2>
+    <h2>Sua pontuação final é ${pontos} pts</h2></div>
     `;
 }
 
