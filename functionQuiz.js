@@ -61,6 +61,9 @@ function saveAnswer(quest, value){
         } else {
             label.style.backgroundColor = "#d2d3db";
         }
+        if(label.innerText == value){
+          label.style.border = "2px solid #242633";
+        }
     }
     if (value == perguntas[quest-1].rightAnswer){
         console.log(`Questão ${quest}: ${value} - Acertou!`);
