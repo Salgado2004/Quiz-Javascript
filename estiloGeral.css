@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Bluu Next, serif';
+    src: url('Fonts/BluuNext-Bold.otf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: "Sofia Pro, serif";
+    src: url("Fonts/sofiapro-light.otf") format(("truetype"));
+  }
+  
+  body{
+    background: #353643;
+  }
