@@ -281,4 +281,8 @@ input[type="text"]{
     margin: 5px;
     text-align: center;
   }
+  
+  #FinalPoints div {
+    flex-direction: row;
+  }
 }
