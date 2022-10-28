@@ -8,15 +8,27 @@
     <link rel="icon" href="assets/image1.png" type="image/jpg">
 
     <link rel="stylesheet" href="styles/estiloGeral.css">
-    <link rel="stylesheet" href="styles/estiloPontuacoes.css">
+    <link rel="stylesheet" href="styles/estiloQuiz.css">
 
-  <body onload="listarPoints()">
-    <table id="listaPontuacoes">
-    </table>
-    <div>
-      <a href="quiz.html" class="buttons">Jogar quiz novamente</a>
-      <a href="index.html" class="buttons">Voltar</a>
-    </div>
-    <script src="js/list.js"></script>
+  <body>
+    <section class="info_box">
+      <div class="info-title"><span>Algumas regras deste Quiz</span></div>
+      <div class="info-list">
+        <p class="info">1. Você terá apenas<span> 15 segundos</span> para cada pergunta.</p>
+        <p class="info">2. Depois de selecionar sua resposta não pode ser desfeita.</p>
+        <p class="info">3. Você não pode selecionar opção depois que o tempo acabar.</p>
+        <p class="info">4. Você não pode sair do Quiz enquanto estiver jogando.</p>
+        <p class="info">5. Você receberá 125 pontos por resposta correta.</p>
+        <p class="info">6. Sua pontuação só será salva se você colocar o seu nome.</p>
+      </div>
+      <div class="buttonArea">
+        <a href="index.html" class="buttons">Sair do Quiz</a>
+        <p class="buttons" onclick="startQuiz()">Continuar</p>
+      </div>
+    </section>
+
+    <section id="questions">
+    </section>
+    <script src="js/functionQuiz.js"></script>  
   </body>
 </html>
