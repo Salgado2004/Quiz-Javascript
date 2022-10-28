@@ -24,7 +24,11 @@ const pergunta11 = new question("Quem escreveu Harry Potter", "J.K.Rowling", "Do
 const pergunta12 = new question("De que personagem é essa voz", "Remus Lupin", "Sirius Black", "Olho-Tonto Moody", "Severus Snape", "Remus Lupin", "<audio controls autoplay><source src='audio/remus.mp3' type='audio/mpeg'></audio>", "img/voz.png");
 const pergunta13 = new question("De que personagem é essa voz", "Hermione Granger", "Bellatrix", "Gina Weasley", "Luna Lovegood", "Luna Lovegood", "<audio controls autoplay><source src='audio/luna.mp3' type='audio/mpeg'></audio>", "img/voz.png");
 const pergunta14 = new question("Qual o primeiro nome do fundador da casa Sonserina", "Godric", "Salazar", "Lupin", "Hodes", "Salazar", "", "img/sonserina.jpg");
-let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14];
+const pergunta15 = new question("Quem é o condutor do Nôitibus Andante", "Stan Shunpike", "Dédalo Diggle", "Robie Fenwick", "Piers Polkins", "Stan Shunpike", "", "img/knightBus.jpg");
+const pergunta16 = new question("Qual destes não é um dos autores do mapa do maroto", "Aluado", "Almofadinhas", "Ranhoso", "Pontas", "Ranhoso", "", "img/MapaDoMaroto.webp");
+const pergunta17 = new question("Que lugar é esse cenário", "Aula de feitiços", "Clube de duelos", "Sala precisa", "Salão comunal", "Sala precisa", "", "img/salaPrecisa.jpg");
+const pergunta18 = new question("Que lugar é esse cenário", "Hogsmeade", "Beco diagonal", "Ministério da Magia", "Kings Cross", "Beco diagonal", "", "img/BecoDiagonal.jpg");
+let perguntas = [pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, pergunta6, pergunta7, pergunta8, pergunta9, pergunta10, pergunta11, pergunta12, pergunta13, pergunta14, pergunta15, pergunta16, pergunta17, pergunta18];
 let pontos = 0;
 let acertos = 0;
 let timer = 0;
