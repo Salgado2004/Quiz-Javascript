@@ -1,0 +1,284 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.info_box {
+  position: relative;
+  width: 800px;  
+  margin-top: 60px; 
+  border-radius: 15px;
+  border: 2px solid #D9C58B;
+  background-color: #353643;
+  box-shadow: 6px 6px 6px #10141b;
+  font-family: 'Bluu Next, serif';
+  transition: all 0.3s ease;
+}
+
+.info-title {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.info-title span{
+  margin: 0 20px;
+  color: #D9C58B;
+  font-size: 30px;
+}
+
+.info-list {
+  padding: 15px 30px;
+}
+
+.info {
+  margin: 5px 0;
+  font-size: 17px;
+  color: #F2E9D8;
+}
+
+.info span {
+  font-weight: 600;
+  color: #6b63b5;
+}
+
+.buttonArea {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+  border-top: 1px solid lightgrey;
+}
+
+.buttons{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  width: 112px;
+  color: #F2E9D8;
+  background: #6b63b5;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.buttons:hover{
+  color: #6b63b5;
+  background: #F2E9D8;
+}
+
+#questions{  
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;   
+  height: 700px;  
+  margin-top: 60px; 
+  border-radius: 15px;
+  border: 1px solid #D9C58B;
+  background-color: #353643;
+  box-shadow: 6px 6px 6px #10141b;
+}
+
+#questTitle{
+  font-family: 'Bluu Next, serif';
+  font-size: 30px;
+  color: #D9C58B;
+  margin: 20px;
+}
+
+img{
+  width: 90%;
+  max-height: 400px;
+}
+  
+input[type="radio"] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+  
+input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 15px;
+  height: 20px;
+  font-family: 'Bluu Next, serif';
+  font-size: 20px;
+  background-color: #6b63b5;
+  color: white;
+  letter-spacing: 0.8px;
+}
+
+input[type="radio"] + label:hover{
+  border: 1px solid white;
+}
+
+.tempo{
+  position: relative;
+  width: 90%;
+  height: 15px;
+  margin: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.tempo::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 0;
+  height: 100%;
+  border-radius: 15px;
+  background-color: #F2E9D8;
+  animation: timer 15s linear;
+}
+
+#FinalPoints{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  font-family: 'Bluu Next, serif';
+  color: #D9C58B;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form label{
+  font-family: 'Bluu Next, serif';
+  color: #F2E9D8;
+  font-size: 26px;
+}
+
+input[type="text"]{
+  background-color: #353643;
+  font-family: 'Bluu Next, serif';
+  color: #F2E9D8;
+  border: 2px solid #D9C58B;
+  border-radius: 15px;
+  padding: 5px;
+  height: 30px;
+  width: 80%;
+}
+#FinalPoints div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 40px;
+  width: 90%;
+  margin: 10px;
+}
+
+#FinalPoints a{
+  display: block;
+  width: 50%;
+  text-align: center;
+  padding: 6px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: #6b63b5;
+  font-family: 'Bluu Next, serif';
+  color: #F2E9D8;
+  text-decoration: none;
+}
+
+#FinalPoints button{
+  width: 50%;
+  text-align: center;
+  padding: 6px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 18px;
+  background-color: #6b63b5;
+  font-family: 'Bluu Next, serif';
+  color: #F2E9D8;
+  outline: none;
+  border: none;
+}
+
+#FinalPoints a:hover, #FinalPoints button:hover{
+  color: #6b63b5;
+  background: #F2E9D8;
+}
+
+@keyframes timer {
+  0%{
+    width: 100%;
+  }
+  60%{
+    background-color: #F2E9D8;
+  }
+  100%{
+    background-color: red;
+    width: 0%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-height: 760px) {
+  #questions, .info_box{   
+    height: 95%;  
+    margin-top: 10px; 
+  }
+
+  img{
+    max-width: 85%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+ 
+  #questions, .info_box{  
+    width: 95%;  
+    height: 95%;  
+    margin-top: 15px; 
+  }
+
+  img{
+    max-width: 85%;
+    margin-bottom: 15px;
+  }
+
+  #questTitle, .info-title span{
+    font-size: 24px;
+  }
+
+  #questions div{
+    display: flex;
+    flex-direction: column;
+  }
+  input + label{
+    width: 100%;
+    text-align: center;
+  }
+  #FinalPoints{
+    font-size: 20px;
+    margin: 5px;
+    text-align: center;
+  }
+}
