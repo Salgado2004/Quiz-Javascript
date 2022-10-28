@@ -1,13 +1,21 @@
 @font-face {
     font-family: 'Bluu Next, serif';
-    src: url('Fonts/BluuNext-Bold.otf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: "Sofia Pro, serif";
-    src: url("Fonts/sofiapro-light.otf") format(("truetype"));
-  }
-  
-  body{
-    background: #353643;
-  }
+    src: url('../Fonts/BluuNext-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Bluu Next, serif';
+    src: url('../Fonts/BluuNext-Bolditalic.otf') format('truetype');
+    font-style: italic;
+}
+
+body{
+    background: url("../assets/Homepage-Hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1034px) {
+    body{
+      background-repeat: repeat-y;
+    }
+}
