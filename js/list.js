@@ -7,7 +7,7 @@ let jogadas = []
 
 function listarPoints() {
     let tabela = document.querySelector("#listaPontuacoes");
-    let pontuacoes = sessionStorage.getItem("pontuacoes");
+    let pontuacoes = localStorage.getItem("pontuacoes");
     if (pontuacoes == null){
         tabela.innerHTML = `
         <tr><th colspan="2">Maiores Pontuações</th></tr>
