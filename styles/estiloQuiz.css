@@ -132,8 +132,20 @@ input[type="radio"] + label:hover{
   border: 1px solid white;
 }
 
-audio::-webkit-media-controls-current-time-display{
-  color: #D9C58B;
+audio {
+  margin-bottom: 5px;
+  width: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Bluu Next, serif';
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #D9C58B;
 }
 
 .tempo{
@@ -257,6 +269,10 @@ input[type="text"]{
 
 @media (max-width: 750px) {
  
+  body{
+    overflow-y: scroll;
+  }
+  
   #questions, .info_box{  
     width: 95%;  
     height: 95%;  
@@ -266,6 +282,9 @@ input[type="text"]{
   img{
     max-width: 85%;
     margin-bottom: 15px;
+  }
+  audio {
+    width: 85%;
   }
 
   #questTitle, .info-title span{
