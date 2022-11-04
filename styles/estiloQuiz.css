@@ -132,6 +132,10 @@ input[type="radio"] + label:hover{
   border: 1px solid white;
 }
 
+audio::-webkit-media-controls-volume-slider-container{
+  color: #6b63b5;
+}
+
 .tempo{
   position: relative;
   width: 90%;
