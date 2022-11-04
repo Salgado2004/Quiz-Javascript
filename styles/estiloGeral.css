@@ -19,3 +19,8 @@ body{
       background-repeat: repeat-y;
     }
 }
+@media (min-height: 753px) {
+    body{
+      background-repeat: repeat-y;
+    }
+}
