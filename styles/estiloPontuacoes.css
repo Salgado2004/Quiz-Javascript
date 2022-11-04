@@ -6,8 +6,7 @@ body{
 }
 
 table{  
-    position: relative;  
-    width: 800px;
+    position: relative; 
     height: 700px;  
     margin-top: 60px; 
     border-radius: 15px;
@@ -23,7 +22,7 @@ th{
 }
 
 td{
-    text-align: center;
+  text-align: center;
     font-size: 24px;
     color: #F2E9D8;
     font-family: 'Bluu Next, serif';
@@ -66,15 +65,15 @@ div {
     }
 }
 
-@media (max-width: 750px) {
-    table{
-      width: 95%;
-    }    
+@media (max-width: 750px) {  
+    img{
+      width: 100%;
+    }
     th{
       font-size: 24px;
     }
     td{
-      font-size: 18px;
+      font-size: 16px;
     }
     div {
       width: 100%;
