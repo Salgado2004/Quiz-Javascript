@@ -132,8 +132,8 @@ input[type="radio"] + label:hover{
   border: 1px solid white;
 }
 
-audio::-webkit-media-controls-volume-slider-container{
-  color: #6b63b5;
+audio::-webkit-media-controls-current-time-display{
+  color: #D9C58B;
 }
 
 .tempo{
