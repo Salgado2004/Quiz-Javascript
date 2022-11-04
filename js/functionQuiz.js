@@ -120,13 +120,13 @@ function endQuiz(){
     form.addEventListener("submit", function (event){
       event.preventDefault();
       let name = document.querySelector("#nome").value;
-      window.sessionStorage.setItem("nome", name);
-      let nome = sessionStorage.getItem("nome");
-      let pontuacoes = sessionStorage.getItem("pontuacoes");
+      window.localStorage.setItem("nome", name);
+      let nome = localStorage.getItem("nome");
+      let pontuacoes = localStorage.getItem("pontuacoes");
       if (pontuacoes == null){
-        window.sessionStorage.setItem("pontuacoes", `${nome}/${pontos}\n`);
+        window.localStorage.setItem("pontuacoes", `${nome}/${pontos}\n`);
       } else{
-        window.sessionStorage.setItem("pontuacoes", `${pontuacoes}${nome}/${pontos}\n`);
+        window.localStorage.setItem("pontuacoes", `${pontuacoes}${nome}/${pontos}\n`);
       }
       alert("Pontuação salva!!");
     })
